@@ -69,11 +69,12 @@ ol {
   grid-auto-flow: column;
   align-items: end;
   gap: 30px;
-  min-width: 1140px;
 }
 
 .result {
   grid-area: res;
+  margin-bottom: 10px;
+  max-width: 711px;
 }
 
 .content__details {
@@ -83,6 +84,7 @@ ol {
   height: 100%;
   gap: 26px;
   grid-area: cd;
+  padding-bottom: 10px;
 }
 
 .search-form {
@@ -125,7 +127,7 @@ ol {
 
 .content__video-card-thumbnail {
   width: 194px;
-  height: 103px;
+  min-height: 103px;
   object-fit: cover;
   object-position: center;
 }
@@ -137,7 +139,7 @@ ol {
 .content__video-card-description {
   line-height: 16.2px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-weight: 400;
@@ -155,6 +157,7 @@ ol {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  max-width: 195px;
 }
 
 .title {
@@ -197,13 +200,18 @@ ol {
   appearance: none;
 }
 
+.search-form__textfield:focus {
+  outline: none;
+}
+
 .search-form__label {
   display: flex;
   width: fit-content;
   cursor: pointer;
+  padding-top: 5px;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -233,8 +241,10 @@ ol {
   background-color: transparent;
   color: white;
   font-size: 18px;
+  font-weight: 700;
   border: 1px solid white;
   cursor: pointer;
+  min-height: 34px;
 }
 
 .button:hover {
@@ -245,6 +255,10 @@ ol {
   background-color: rgba(84, 80, 80, 1);
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button:focus-visible {
   outline: 1px solid white;
   outline-offset: 2px;
@@ -252,14 +266,12 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   align-self: flex-end;
 }
 
 .more-button {
   margin-top: 30px;
   width: 100%;
-  height: 34px;
 }
 
 .content__card-link {
@@ -280,7 +292,11 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid white;
+  outline: 1px solid white;
+}
+
+.content__card-link:active {
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__list-item {
