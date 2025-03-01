@@ -80,7 +80,7 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 400px;
   height: 100%;
   gap: 26px;
   grid-area: cd;
@@ -116,7 +116,7 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .content__video-card {
@@ -137,6 +137,7 @@ ol {
 }
 
 .content__video-card-description {
+  width: 196px;
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -177,6 +178,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
+  padding-bottom: 5px;
 }
 
 .search-form__checkbox-list {
@@ -208,7 +210,6 @@ ol {
   display: flex;
   width: fit-content;
   cursor: pointer;
-  padding-top: 5px;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -217,6 +218,7 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
+  outline-offset: 1px;
 }
 
 .search-form__pseudo-checkbox {
